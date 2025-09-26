@@ -2,9 +2,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require("yavidor.remap")
-require("yavidor.options")
-require("yavidor.lazy")
+require 'yavidor.remap'
+require 'yavidor.options'
+require 'yavidor.lazy'
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
