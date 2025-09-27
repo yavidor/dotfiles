@@ -9,7 +9,14 @@ vim.diagnostic.config {
       [vim.diagnostic.severity.INFO] = '󰋽 ',
       [vim.diagnostic.severity.HINT] = '󰌶 ',
     },
-  } or {},
+  } or {
+    text = {
+      [vim.diagnostic.severity.ERROR] = 'E ',
+      [vim.diagnostic.severity.WARN] = 'W ',
+      [vim.diagnostic.severity.INFO] = 'I ',
+      [vim.diagnostic.severity.HINT] = 'H ',
+    },
+  },
   virtual_text = {
     source = 'if_many',
     spacing = 2,
