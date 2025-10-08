@@ -81,6 +81,13 @@ return {
         },
       },
       stylua = {},
+      tinymist = {
+        single_file_support = true,
+        settings = {
+          exportPdf = 'onSave',
+        },
+      },
+      typstyle = {},
     }
 
     local ensure_installed = vim.tbl_keys(servers or {})
