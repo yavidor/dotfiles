@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH="${PATH}:${HOME}/.local/bin::/usr/local/go/bin"
+export PATH="${PATH}:${HOME}/.local/bin::/usr/local/go/bin:/usr/local/texlive/2025/bin/x86_64-linux"
 eval "$(zoxide init bash)"
 
 export NVM_DIR="$HOME/.nvm"
