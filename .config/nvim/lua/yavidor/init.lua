@@ -14,3 +14,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = { '*.c', '*.cpp', '*.h', '*.hpp' },
+  callback = function()
+    vim.opt.colorcolumn = '80'
+    vim.api.nvim_set_hl(0, 'ColorColumn', { ctermbg = 'grey', bg = 'grey' })
+  end,
+})
