@@ -62,14 +62,13 @@ return {
       clangd = {},
       gopls = {},
       helm_ls = {},
-      -- ts_ls = {
-      --   settings = {
-      --     implicitProjectConfiguration = {
-      --       checkJs = true,
-      --     },
-      -- },
-      -- },
-      tsgo = {},
+      ts_ls = {
+        settings = {
+          implicitProjectConfiguration = {
+            checkJs = true,
+          },
+        },
+      },
 
       lua_ls = {
         settings = {
