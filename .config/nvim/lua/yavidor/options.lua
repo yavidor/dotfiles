@@ -18,3 +18,6 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.confirm = true
+
+-- For obsidian.nvim
+vim.opt.conceallevel = 1
