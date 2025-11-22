@@ -108,7 +108,6 @@ source $ZSH/oh-my-zsh.sh
 neofetch #--ascii_distro windows
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
-export GEMINI_API_KEY=AIzaSyBRUBLYGhfgySXrtmwVOnV9vuOABX22KzQ
 export PATH="/home/yavidor/go/bin:$PATH"
 alias move-display="~/.scripts/change_display_direction"
 
