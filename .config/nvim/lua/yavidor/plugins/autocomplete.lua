@@ -19,6 +19,7 @@ return {
         -- `friendly-snippets` contains a variety of premade snippets.
         --    See the README about individual language/framework/plugin snippets:
         --    https://github.com/rafamadriz/friendly-snippets
+        'rafamadriz/friendly-snippets',
       },
     },
     'folke/lazydev.nvim',
@@ -43,6 +44,9 @@ return {
     sources = {
       default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer' },
       providers = {
+        snippets = {
+          opts = {},
+        },
         lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
       },
     },
