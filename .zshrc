@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
 
 if [[ -z "$DISPLAY" ]] then
-  hyprland;
+  start-hyprland;
 fi
 
 # Set list of themes to pick from when loading at random
