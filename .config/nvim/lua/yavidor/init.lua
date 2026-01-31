@@ -5,6 +5,7 @@ vim.g.maplocalleader = ' '
 require 'yavidor.remap'
 require 'yavidor.options'
 require 'yavidor.lazy'
+require 'yavidor.cmds'
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {

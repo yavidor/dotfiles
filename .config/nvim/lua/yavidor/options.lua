@@ -20,4 +20,4 @@ vim.opt.scrolloff = 10
 vim.opt.confirm = true
 
 -- For obsidian.nvim
--- vim.opt.conceallevel = 1
+vim.opt.conceallevel = 1
