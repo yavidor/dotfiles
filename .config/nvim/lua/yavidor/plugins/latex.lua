@@ -9,7 +9,7 @@ return {
     vim.g.vimtex_compiler_latexmk_engines = {
       _ = '-lualatex',
     }
-    vim.g.tex_conceal = 'abdgm'
-    vim.g.tex_conceal_frac = 1
+    -- vim.g.tex_conceal = 'abdgm'
+    -- vim.g.tex_conceal_frac = 1
   end,
 }
