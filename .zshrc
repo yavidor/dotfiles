@@ -9,9 +9,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
 
-if [[ -z "$DISPLAY" ]] then
-  start-hyprland;
-fi
+# if [[ -z "$DISPLAY" ]] then
+#   start-hyprland;
+# fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,10 +105,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-neofetch #--ascii_distro windows
+fastfetch #--ascii_distro windows
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 export PATH="/home/yavidor/go/bin:$PATH"
 alias move-display="~/.scripts/change_display_direction"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f "/home/yavidor/.ghcup/env" ] && . "/home/yavidor/.ghcup/env" # ghcup-env
