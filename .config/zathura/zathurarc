@@ -14,4 +14,5 @@ set zoom-min 10
 set guioptions ""
 
 # SzguRUFzNm5BbW50Y2JICg==
-include catppuccin-mocha
+# include catppuccin-mocha
+include catppuccin-latte
