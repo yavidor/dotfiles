@@ -19,14 +19,14 @@ return {
   },
   opts = {
     workspaces = {
-      -- {
-      --   name = 'personal',
-      --   path = '~/Documents/obsidian',
-      -- },
       {
-        name = 'windows',
-        path = '/mnt/c/Users/yonat/Documents/obsidian',
+        name = 'personal',
+        path = '~/Documents/obsidian',
       },
+      -- {
+      --   name = 'windows',
+      --   path = '/mnt/c/Users/yonat/Documents/obsidian',
+      -- },
     },
 
     ui = {
