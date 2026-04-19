@@ -59,7 +59,6 @@ return {
     local capabilities = require('blink.cmp').get_lsp_capabilities()
     local servers = {
       clangd = {},
-      gopls = {},
       helm_ls = {},
       ts_ls = {
         settings = {

@@ -8,6 +8,18 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
+SPACESHIP_PROMPT_ASYNC=true
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+
+# Only load what you actually use
+SPACESHIP_PROMPT_ORDER=(
+    time
+    user
+    dir
+    git
+    line_sep
+    char
+)
 
 # if [[ -z "$DISPLAY" ]] then
 #   start-hyprland;
