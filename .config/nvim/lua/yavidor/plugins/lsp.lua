@@ -60,6 +60,7 @@ return {
     local servers = {
       clangd = {},
       helm_ls = {},
+      gopls = {},
       ts_ls = {
         settings = {
           implicitProjectConfiguration = {
