@@ -2,4 +2,4 @@
 	email = yonatan@avidor.org
 	name = yavidor
 [core]
-	editor = vim
+	editor = nvim
