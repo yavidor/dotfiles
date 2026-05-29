@@ -7,19 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
-SPACESHIP_PROMPT_ASYNC=true
-SPACESHIP_PROMPT_ADD_NEWLINE=true
-
-# Only load what you actually use
-SPACESHIP_PROMPT_ORDER=(
-    time
-    user
-    dir
-    git
-    line_sep
-    char
-)
+ZSH_THEME=""
 
 # if [[ -z "$DISPLAY" ]] then
 #   start-hyprland;
@@ -62,7 +50,7 @@ SPACESHIP_PROMPT_ORDER=(
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -85,7 +73,7 @@ SPACESHIP_PROMPT_ORDER=(
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=()
+# plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,11 +85,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
   export EDITOR='nvim'
-# fi
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -120,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 fastfetch #--ascii_distro windows
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
-export PATH="/home/yavidor/go/bin:$PATH"
+export PATH="/home/yavidor/.local/bin:/home/yavidor/go/bin:$PATH"
 alias move-display="~/.scripts/change_display_direction"
 
 export NVM_DIR="$HOME/.nvm"
@@ -128,10 +116,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f "/home/yavidor/.ghcup/env" ] && . "/home/yavidor/.ghcup/env" # ghcup-env
+
 . "$HOME/.cargo/env"
+
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
 --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
 --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4"
+
+eval "$(starship init zsh)"
