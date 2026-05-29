@@ -66,7 +66,7 @@ format = '[ $user]($style)'
 [directory]
 style = "bg:peach fg:crust"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 2
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -74,7 +74,7 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Developer" = "󰲋 "
+"gitProjects" = "󰲋 "
 
 [git_branch]
 symbol = ""
@@ -170,7 +170,7 @@ format = " in $duration "
 style = "bg:lavender"
 disabled = false
 show_notifications = true
-min_time_to_notify = 45000
+min_time_to_notify = 50000
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
