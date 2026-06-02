@@ -11,6 +11,7 @@ $git_branch\
 $git_status\
 [](fg:yellow bg:green)\
 $c\
+$cpp\
 $rust\
 $golang\
 $nodejs\
@@ -20,8 +21,10 @@ $java\
 $kotlin\
 $haskell\
 $python\
+$lua\
 [](fg:green bg:sapphire)\
 $conda\
+$battery\
 [](fg:sapphire bg:lavender)\
 $time\
 [ ](fg:lavender)\
@@ -99,6 +102,13 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 symbol = " "
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+# disabled=true
+
+[cpp]
+symbol = " "
+style = "bg:green"
+disabled=false
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [rust]
 symbol = ""
@@ -134,6 +144,11 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
+
+[lua]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [docker_context]
 symbol = ""
