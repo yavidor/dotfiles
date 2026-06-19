@@ -108,7 +108,8 @@ fi
 fastfetch #--ascii_distro windows
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
-export PATH="/home/yavidor/.local/bin:/home/yavidor/go/bin:$PATH"
+export PATH="/home/yavidor/.local/bin:/usr/local/go/bin:$PATH"
+export PATH="$(go env GOPATH)/bin:$PATH"
 alias move-display="~/.scripts/change_display_direction"
 
 export NVM_DIR="$HOME/.nvm"
@@ -127,3 +128,11 @@ export FZF_DEFAULT_OPTS=" \
 --color=border:#6C7086,label:#CDD6F4"
 
 eval "$(starship init zsh)"
+
+# bun completions
+[ -s "/home/yavidor/.oh-my-zsh/completions/_bun" ] && source "/home/yavidor/.oh-my-zsh/completions/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+alias build_katvan="cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/home/yavidor/gitProjects/katvan/build/install -DCMAKE_PREFIX_PATH='/home/yavidor/Qt/6.11.0;/usr/local/lib' -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && cmake --build build"

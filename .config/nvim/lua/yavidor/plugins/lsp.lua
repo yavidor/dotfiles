@@ -1,3 +1,11 @@
+local function getClangSettings()
+  local settings = {}
+  -- local filepath = vim.fn.expand '%:p'
+  -- if filepath:match '/gitProjects/katvan' then
+  --   settings['cmd'] = 'a'
+  -- end
+  return settings
+end
 return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
@@ -58,7 +66,7 @@ return {
 
     local capabilities = require('blink.cmp').get_lsp_capabilities()
     local servers = {
-      clangd = {},
+      -- clangd = getClangSettings(),
       helm_ls = {},
       gopls = {},
       ts_ls = {
@@ -92,6 +100,7 @@ return {
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
+          print(server_name)
           server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
           require('lspconfig')[server_name].setup(server)
         end,
