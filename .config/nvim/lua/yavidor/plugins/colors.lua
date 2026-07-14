@@ -3,6 +3,7 @@ return {
   name = 'catppuccin',
   opts = {
     transparent_background = true,
+    integrations = { blink_cmp = true },
   },
   priority = 1000,
   init = function()
