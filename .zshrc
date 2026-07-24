@@ -136,3 +136,7 @@ eval "$(starship init zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 alias build_katvan="cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/home/yavidor/gitProjects/katvan/build/install -DCMAKE_PREFIX_PATH='/home/yavidor/Qt/6.11.0;/usr/local/lib' -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && cmake --build build"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
