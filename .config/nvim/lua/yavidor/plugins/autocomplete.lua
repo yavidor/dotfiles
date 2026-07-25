@@ -3,7 +3,22 @@ return {
   event = 'VimEnter',
   version = '1.*',
   dependencies = {
-    'rafamadriz/friendly-snippets',
+    {
+      'L3MON4D3/LuaSnip',
+      -- follow latest release.
+      version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+      -- install jsregexp (optional!).
+      build = 'make install_jsregexp',
+      lazy = true,
+      dependencies = {
+        'rafamadriz/friendly-snippets',
+        config = function()
+          require('luasnip.loaders.from_vscode').lazy_load()
+          require('luasnip.loaders.from_vscode').lazy_load { paths = { vim.fn.stdpath 'config' .. '/snippets' } }
+        end,
+      },
+    },
+    -- 'rafamadriz/friendly-snippets',
     'folke/lazydev.nvim',
   },
   --- @module 'blink.cmp'
@@ -13,7 +28,8 @@ return {
       preset = 'default',
     },
 
-    snippets = { preset = 'default' },
+    snippets = { preset = 'luasnip' },
+
     appearance = {
       nerd_font_variant = 'mono',
     },
@@ -35,8 +51,11 @@ return {
     sources = {
       default = { 'lsp', 'snippets', 'path', 'lazydev', 'buffer' },
       providers = {
-        snippets = { opts = { friendly_snippets = true } },
         lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+        snippets = { score_offset = 100 },
+        lsp = { score_offset = 50 },
+        path = { score_offset = 10 },
+        buffer = { score_offset = -10 },
       },
     },
 
