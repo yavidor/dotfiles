@@ -8,23 +8,23 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        // "hyprland/mode",
+        "hyprland/mode",
         "hyprland/scratchpad",
         "custom/media"
     ],
-    // "modules-center": [
-    //     // "hyprland/window"
-    // ],
+    "modules-center": [
+        "hyprland/window"
+    ],
     "modules-right": [
         "mpd",
         // "idle_inhibitor",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
-        "cpu",
-        "memory",
+        // "cpu",
+        // "memory",
         // "temperature",
-        // "backlight",
+        "backlight",
         // "keyboard-state",
         "hyprland/language",
         "battery",
@@ -34,22 +34,24 @@
         // "custom/power"
     ],
     // Modules configuration
-    // "hyprland/workspaces": {
+    "hyprland/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
     //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+        // "format": "{name}: {icon}",
+        // "format-icons": {
+        //     "1": "",
+        //     "2": "",
+        //     "3": "",
+        //     "4": "",
+        //     "5": "",
+        //     "urgent": "",
+        //     "focused": "",
+        //     "default": ""
+        // },
+        "format": "{name}",
+        "on-click": "activate",
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -59,9 +61,9 @@
             "unlocked": ""
         }
     },
-    "hyprland/workspaces": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
+    // "hyprland/workspaces": {
+    //     "format": "<span style=\"italic\">{}</span>"
+    // },
     "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
@@ -107,7 +109,7 @@
         "spacing": 4
     },
     "clock": {
-        // "timezone": "America/New_York",
+        "timezone": "Asia/Jerusalem",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },

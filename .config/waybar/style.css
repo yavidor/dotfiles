@@ -1,16 +1,20 @@
+@import 'mocha.css';
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family:  "JetBrains Mono NL", FontAwesome;
     /* font-family:  "Hack Nerd Font Mono"; */
-    font-size: 13px;
-}
+    color: @text;
+    font-size: 13px; }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    /* background-color: rgba(43, 48, 59, 0.5); */
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    /* color: #ffffff; */
     transition-property: background-color;
     transition-duration: .5s;
+    
+  background-color: shade(@base, 0.9);
+  border: 2px solid alpha(@crust, 0.3);
 }
 
 window#waybar.hidden {
