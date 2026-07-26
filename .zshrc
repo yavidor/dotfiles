@@ -9,9 +9,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME=""
 
-# if [[ -z "$DISPLAY" ]] then
-#   start-hyprland;
-# fi
+if [[ -z "$DISPLAY" ]] then
+  start-hyprland;
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -139,6 +139,7 @@ alias build_katvan="cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+eval "$(spotify_player generate zsh)"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -147,3 +148,6 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	command rm -f -- "$tmp"
 }
+export MANPAGER="bat -plman"
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
