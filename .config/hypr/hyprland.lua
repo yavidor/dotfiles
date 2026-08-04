@@ -26,13 +26,20 @@ hl.monitor({
 	scale = "auto",
 })
 
+hl.monitor({
+	output = "HDMI-A-1",
+	mode = "preferred",
+	position = "auto-left",
+	scale = "auto",
+})
+
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
 
 -- Set programs that you use
 local terminal = "kitty"
-local fileManager = "yazi"
+local fileManager = "thunar"
 local menu = "hyprlauncher"
 
 -------------------
@@ -374,6 +381,7 @@ hl.window_rule({
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprland-session.target")
+	hl.exec_cmd("systemctl --user start hyprpaper.service")
 end)
 
 hl.on("hyprland.shutdown", function()
