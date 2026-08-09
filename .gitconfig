@@ -3,3 +3,4 @@
 	name = yavidor
 [core]
 	editor = nvim
+	excludesfile = /home/yavidor/.gitignore

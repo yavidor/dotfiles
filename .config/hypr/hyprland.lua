@@ -381,7 +381,6 @@ hl.window_rule({
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprland-session.target")
-	-- hl.exec_cmd("systemctl --user start hyprpaper.service")
 end)
 
 hl.on("hyprland.shutdown", function()
