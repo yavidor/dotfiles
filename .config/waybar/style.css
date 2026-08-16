@@ -1,7 +1,6 @@
 @import 'mocha.css';
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family:  "JetBrains Mono NL", FontAwesome;
+    font-family:  "JuliaMono NL";
     /* font-family:  "Hack Nerd Font Mono"; */
     color: @text;
     font-size: 13px; }
@@ -16,7 +15,6 @@ window#waybar {
   background-color: shade(@base, 0.9);
   border: 2px solid alpha(@crust, 0.3);
 }
-
 window#waybar.hidden {
     opacity: 0.2;
 }
