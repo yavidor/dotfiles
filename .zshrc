@@ -152,3 +152,7 @@ function y() {
 # export MANPAGER="bat -plman"
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -n "$TMUX" ]; then
+    printf '\033[5 q'
+fi
+
