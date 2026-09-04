@@ -30,7 +30,7 @@ hl.monitor({
 	mode = "preferred",
 	position = "auto-left",
 	scale = "auto",
-	-- mirror = "eDP-1",
+	mirror = "eDP-1",
 })
 
 ---------------------
