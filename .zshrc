@@ -155,3 +155,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # if [ -n "$TMUX" ]; then
     printf '\033[5 q'
 # fi
+
