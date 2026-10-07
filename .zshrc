@@ -111,6 +111,9 @@ eval "$(zoxide init zsh)"
 export PATH="/home/yavidor/.local/bin:/usr/local/go/bin:$PATH"
 export PATH="$(go env GOPATH)/bin:$PATH"
 alias move-display="~/.scripts/change_display_direction"
+get-avg-temp() {
+    sensors coretemp-isa-0000 | grep Core | awk '{print $3}' | sed -E 's/\+([0-9]+)\.0.+/\1/' | awk '{sum += $1} END {print sum/NR}'
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

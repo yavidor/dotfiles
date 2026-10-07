@@ -30,7 +30,7 @@ hl.monitor({
 	mode = "preferred",
 	position = "auto-left",
 	scale = "auto",
-	mirror = "eDP-1",
+	-- mirror = "eDP-1",
 })
 
 ---------------------
@@ -41,6 +41,7 @@ hl.monitor({
 local terminal = "kitty"
 local fileManager = "thunar"
 local menu = "hyprlauncher"
+local browser = "firefox"
 
 -------------------
 ---- AUTOSTART ----
@@ -51,11 +52,12 @@ local menu = "hyprlauncher"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
--- hl.on("hyprland.start", function ()
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
--- end)
+hl.on("hyprland.start", function()
+	hl.exec_cmd(terminal, { workspace = 1 })
+	hl.exec_cmd(browser, { workspace = 2 })
+	hl.exec_cmd("obsidian", { workspace = 3 })
+	hl.exec_cmd("steam", { workspace = 4 })
+end)
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
@@ -94,7 +96,7 @@ hl.config({
 		gaps_in = 5,
 		gaps_out = 20,
 
-		border_size = 2,
+		border_size = 1,
 
 		col = {
 			active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
