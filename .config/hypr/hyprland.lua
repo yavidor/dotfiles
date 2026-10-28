@@ -213,7 +213,7 @@ hl.config({
 
 hl.config({
 	misc = {
-		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
+		force_default_wallpaper = 0, -- Set to 0 or 1 to disable the anime mascot wallpapers
 		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
 	},
 })
@@ -284,6 +284,9 @@ hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 -- Move workspaces between monitors
 hl.bind(mainMod .. " + SHIFT + left", hl.dsp.workspace.move({ monitor = "+1" }))
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.workspace.move({ monitor = "-1" }))
+
+-- Open common apps
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
