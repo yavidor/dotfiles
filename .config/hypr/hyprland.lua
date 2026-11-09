@@ -22,13 +22,13 @@ hl.monitor({
 	output = "",
 	mode = "preferred",
 	position = "auto",
-	scale = 1.25,
+	scale = 1, --.25,
 })
 
 hl.monitor({
 	output = "HDMI-A-1",
 	mode = "preferred",
-	position = "auto-left",
+	position = "auto-right",
 	scale = "auto",
 	-- mirror = "eDP-1",
 })
